@@ -1649,9 +1649,10 @@ div.cs-select span {
 }
 
 #map1 {
-  width: 100%;
+  width: 50%;
   height: 500px;
   position: relative;
+  margin:0 auto;
 }
 @media screen and (max-width: 768px) {
   #map1 {
