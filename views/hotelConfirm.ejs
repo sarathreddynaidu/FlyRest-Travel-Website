@@ -112,22 +112,53 @@
                 <form action="/hotelConfirm" method="POST">
                   <div class="tab-content">
                       <div class="row">
-                        <div class="col-xxs-12 col-xs-6 mt">
-                          <div class="input-field">
-                            <label for="fromcity">Details</label>
-                            <input
-                              type="text"
-                              class="form-control"
-                              id="fromcity"
-                              name="fromcity"
-                            />
+                        <% hotels.forEach(function(hotel){ %>
+                          <div class="col-xxs-12 col-xs-6 mt">
+                            <h4>City: <%=hotel.city %></h4>
                           </div>
-                        </div>
+                          <div class="col-xxs-12 col-xs-6 mt">
+                            <h4>Check In: <%=hotel.checkIn %></h4>
+                          </div>
+                          <div class="col-xxs-12 col-xs-6 mt">
+                            <h4>Rooms: <%=hotel.rooms %></h4>
+                          </div>
+                          <div class="col-xxs-12 col-xs-6 mt">
+                            <h4>Check Out: <%=hotel.checkOut %></h4>
+                          </div>
+                          <div class="col-xxs-12 col-xs-6 mt">
+                            <h4>Number of Guests: <%=hotel.guests %></h4>
+                          </div>
+                          <div class="col-xxs-12 col-xs-6 mt">
+                            <h4>Hotel: <%=hotel.hotel %></h4>
+                          </div>
+                        <% }) %>
+
+                        <% users.forEach(function(user){ %>
+                          <div class="col-xxs-12 col-xs-6 mt">
+                            <h4>First Name: <%=user.firstName %></h4>
+                          </div>
+                          <div class="col-xxs-12 col-xs-6 mt">
+                            <h4>Last Name: <%=user.lastName %></h4>
+                          </div>
+                          <div class="col-xxs-12 col-xs-6 mt">
+                            <h4>Card Number: <%=user.cardNumber %></h4>
+                          </div>
+                          <div class="col-xxs-12 col-xs-6 mt">
+                            <h4>Expiry Month: <%=user.expiryMonth %></h4>
+                          </div>
+                          <div class="col-xxs-12 col-xs-6 mt">
+                            <h4>Expiry Year: <%=user.expiryYear %></h4>
+                          </div>
+                          <div class="col-xxs-12 col-xs-6 mt">
+                            <h4>CVV: <%=user.cvv %></h4>
+                          </div>
+                        <% }) %>
+
                         <div class="col-xs-12">
                           <input
                             type="submit"
                             class="btn btn-primary btn-block"
-                            value="Search Flight"
+                            value="Confirm Hotel"
                           />
                         </div>
                       </div>

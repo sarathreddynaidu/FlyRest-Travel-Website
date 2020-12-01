@@ -56,30 +56,34 @@ userCredSchema.plugin(passportLocalMongoose);
 const flightSchema = new mongoose.Schema({
     fromCity: String,
     toCity: String,
-    departureDate: Date,
-    returnDate: Date,
-    travelers: Number
+    departureDate: String,
+    returnDate: String,
+    travelers: Number,
+    airline: String
 });
 
 const hotelSchema = new mongoose.Schema({
     city: String,
-    checkIn: Date,
-    checkOut: Date,
+    checkIn: String,
+    checkOut: String,
     rooms: Number,
-    guests: Number
+    guests: Number,
+    hotel: String
 });
 
 const flighthotelSchema = new mongoose.Schema({
     fromCity: String,
     toCity: String,
-    departureDate: Date,
-    returnDate: Date,
+    departureDate: String,
+    returnDate: String,
     travelers: Number,
+    airline: String,
     city: String,
-    checkIn: Date,
-    checkOut: Date,
+    checkIn: String,
+    checkOut: String,
     rooms: Number,
-    guests: Number
+    guests: Number,
+    hotel: String
 });
 
 const feedbackSchema = new mongoose.Schema({
@@ -145,7 +149,25 @@ app.get("/flight1", function(req, res){
 });
 
 app.get("/flightConfirm", function(req, res){
-    res.render("flightConfirm");
+    Flight.find({}, function(err, flightData){
+        if(err){
+            console.log(err);
+        }
+        else{
+            User.find({}, function(err, userData){
+                if(err){
+                    console.log(err);
+                }
+                else{
+                    res.render("flightConfirm", {
+                        flights: flightData,
+                        users: userData
+                    });
+                }
+            });
+
+        }
+    });
 });
 
 app.get("/flightBooked", function(req, res){
@@ -157,7 +179,25 @@ app.get("/hotel1", function(req, res){
 });
 
 app.get("/hotelConfirm", function(req, res){
-    res.render("hotelConfirm");
+    Hotel.find({}, function(err, hotelData){
+        if(err){
+            console.log(err);
+        }
+        else{
+            User.find({}, function(err, userData){
+                if(err){
+                    console.log(err);
+                }
+                else{
+                    res.render("hotelConfirm", {
+                        hotels: hotelData,
+                        users: userData
+                    });
+                }
+            });
+
+        }
+    });
 });
 
 app.get("/hotelBooked", function(req, res){
@@ -169,7 +209,25 @@ app.get("/flightHotel1", function(req, res){
 });
 
 app.get("/flightHotelConfirm", function(req, res){
-    res.render("flightHotelConfirm");
+    Flighthotel.find({}, function(err, flightHotelData){
+        if(err){
+            console.log(err);
+        }
+        else{
+            User.find({}, function(err, userData){
+                if(err){
+                    console.log(err);
+                }
+                else{
+                    res.render("flightHotelConfirm", {
+                        flightHotels: flightHotelData,
+                        users: userData
+                    });
+                }
+            });
+
+        }
+    });
 });
 
 app.get("/flightHotelBooked", function(req, res){
@@ -222,48 +280,14 @@ app.get("/logout", function(req, res){
     res.redirect("/");
 });
 
-app.post("/index1", function(req, res){
-    const newFlight = new Flight({
-        fromCity: req.body.fromcity,
-        toCity: req.body.tocity,
-        departureDate: req.body.departurecity,
-        returnDate: req.body.returncity,
-        travelers: req.body.travelers
-    });
-    newFlight.save(function(err){
-        if(err){
-            console.log(err);
-        }
-        else{
-            console.log("Flight data added");
-        }
-        res.render("flightBooked");
-    });
-    const newHotel = new Hotel({
-        city: req.body.city,
-        checkIn: req.body.checkin,
-        checkOut: req.body.checkout,
-        rooms: req.body.rooms,
-        guests: req.body.guests
-    });
-    newHotel.save(function(err){
-        if(err){
-            console.log(err);
-        }
-        else{
-            console.log("Hotel data added");
-        }
-        // res.render("hotelConfirm");
-    });
-});
-
 app.post("/flight1", function(req, res){
     const newFlight = new Flight({
         fromCity: req.body.fromcity,
         toCity: req.body.tocity,
         departureDate: req.body.departurecity,
         returnDate: req.body.returncity,
-        travelers: req.body.travelers
+        travelers: req.body.travelers,
+        airline: req.body.airline
     });
     newFlight.save(function(err){
         if(err){
@@ -286,7 +310,8 @@ app.post("/hotel1", function(req, res){
         checkIn: req.body.checkin,
         checkOut: req.body.checkout,
         rooms: req.body.rooms,
-        guests: req.body.guests
+        guests: req.body.guests,
+        hotel: req.body.hotel
     });
     newHotel.save(function(err){
         if(err){
@@ -311,11 +336,13 @@ app.post("/flighthotel1", function(req, res){
         departureDate: req.body.departuredate,
         returnDate: req.body.returndate,
         travelers: req.body.travelers,
+        airline: req.body.airline,
         city: req.body.city,
         checkIn: req.body.checkin,
         checkOut: req.body.checkout,
         rooms: req.body.rooms,
-        guests: req.body.guests
+        guests: req.body.guests,
+        hotel: req.body.hotel
     });
     newFlightHotel.save(function(err){
         if(err){

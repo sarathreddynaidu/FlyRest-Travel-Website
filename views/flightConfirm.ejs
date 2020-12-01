@@ -96,7 +96,7 @@
               <div
                 class="col-md-8 col-md-offset-2 text-center heading-section animate-box"
               >
-                <h3>Confirm Flight Details</h3>
+                <h3>Confirm Flight and Payment Details</h3>
               </div>
             </div>
           </div>
@@ -112,22 +112,53 @@
                 <form action="/flightConfirm" method="POST">
                   <div class="tab-content">
                       <div class="row">
-                        <div class="col-xxs-12 col-xs-6 mt">
-                          <div class="input-field">
-                            <label for="fromcity">Details</label>
-                            <input
-                              type="text"
-                              class="form-control"
-                              id="fromcity"
-                              name="fromcity"
-                            />
+                        <% flights.forEach(function(flight){ %>
+                          <div class="col-xxs-12 col-xs-6 mt">
+                            <h4>Departure City: <%=flight.fromCity %></h4>
                           </div>
-                        </div>
+                          <div class="col-xxs-12 col-xs-6 mt">
+                            <h4>Arrival City: <%=flight.toCity %></h4>
+                          </div>
+                          <div class="col-xxs-12 col-xs-6 mt">
+                            <h4>Departure Date: <%=flight.departureDate %></h4>
+                          </div>
+                          <div class="col-xxs-12 col-xs-6 mt">
+                            <h4>Return Date: <%=flight.returnDate %></h4>
+                          </div>
+                          <div class="col-xxs-12 col-xs-6 mt">
+                            <h4>Number of Travelers: <%=flight.travelers %></h4>
+                          </div>
+                          <div class="col-xxs-12 col-xs-6 mt">
+                            <h4>Airline: <%=flight.airline %></h4>
+                          </div>
+                        <% }) %>
+
+                        <% users.forEach(function(user){ %>
+                          <div class="col-xxs-12 col-xs-6 mt">
+                            <h4>First Name: <%=user.firstName %></h4>
+                          </div>
+                          <div class="col-xxs-12 col-xs-6 mt">
+                            <h4>Last Name: <%=user.lastName %></h4>
+                          </div>
+                          <div class="col-xxs-12 col-xs-6 mt">
+                            <h4>Card Number: <%=user.cardNumber %></h4>
+                          </div>
+                          <div class="col-xxs-12 col-xs-6 mt">
+                            <h4>Expiry Month: <%=user.expiryMonth %></h4>
+                          </div>
+                          <div class="col-xxs-12 col-xs-6 mt">
+                            <h4>Expiry Year: <%=user.expiryYear %></h4>
+                          </div>
+                          <div class="col-xxs-12 col-xs-6 mt">
+                            <h4>CVV: <%=user.cvv %></h4>
+                          </div>
+                        <% }) %>
+
                         <div class="col-xs-12">
                           <input
                             type="submit"
                             class="btn btn-primary btn-block"
-                            value="Search Flight"
+                            value="Confirm Flight"
                           />
                         </div>
                       </div>
