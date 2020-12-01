@@ -168,6 +168,7 @@ app.get("/flightConfirm", function(req, res){
 
         }
     });
+    
 });
 
 app.get("/flightBooked", function(req, res){
