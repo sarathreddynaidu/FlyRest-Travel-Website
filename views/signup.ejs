@@ -109,248 +109,266 @@
                 <!-- Nav tabs -->
 
                 <!-- Tab panes -->
-                <div class="tab-content">
-                    <div class="row">
-                      <div class="col-xxs-12 col-xs-12 mt">
-                        <h3>User Details:</h3>
-                      </div>
-                      <div class="col-xxs-12 col-xs-4 mt">
-                        <div class="input-field">
-                          <label for="firstName">First Name:</label>
+                <form action="/signup" method=POST>
+                  <div class="tab-content">
+                      <div class="row">
+                        <div class="col-xxs-12 col-xs-12 mt">
+                          <h3>User Details:</h3>
+                        </div>
+                        <div class="col-xxs-12 col-xs-4 mt">
+                          <div class="input-field">
+                            <label for="firstname">First Name:</label>
+                            <input
+                              id="firstname"
+                              name="firstname"
+                              type="text"
+                              class="form-control"
+                              required
+                            />
+                          </div>
+                        </div>
+
+                        <div class="col-xxs-12 col-xs-4 mt">
+                          <div class="input-field">
+                            <label for="middlename">Middle Name: (if any)</label>
+                            <input
+                              id="middlename"
+                              name="middlename"
+                              type="text"
+                              class="form-control"
+                            />
+                          </div>
+                        </div>
+
+                        <div class="col-xxs-12 col-xs-4 mt">
+                          <div class="input-field">
+                            <label for="lastname">Last Name:</label>
+                            <input
+                              id="lastname"
+                              name="lastname"
+                              type="text"
+                              class="form-control"
+                              required
+                            />
+                          </div>
+                        </div>
+
+                        
+                        <div class="col-xxs-12 col-xs-4 mt">
+                          <div class="input-field">
+                            <label for="address1">Address Line 1:</label>
+                            <input
+                              id="address1"
+                              name="address1"
+                              type="text"
+                              class="form-control"
+                              required
+                            />
+                          </div>
+                        </div>
+
+                        <div class="col-xxs-12 col-xs-4 mt">
+                          <div class="input-field">
+                            <label for="address2">Address Line 2:</label>
+                            <input
+                              id="address2"
+                              name="address2"
+                              type="text"
+                              class="form-control"
+                            />
+                          </div>
+                        </div>
+
+                        
+                        <div class="col-xxs-12 col-xs-4 mt">
+                          <div class="input-field">
+                            <label for="city">City:</label>
+                            <input
+                              id="city"
+                              name="city"
+                              type="text"
+                              class="form-control"
+                              required
+                            />
+                          </div>
+                        </div>
+
+                        <div class="col-xxs-12 col-xs-4 mt">
+                          <div class="input-field">
+                            <label for="state">State:</label>
+                            <input
+                              id="state"
+                              name="state"
+                              type="text"
+                              class="form-control"
+                              required
+                            />
+                          </div>
+                        </div>
+
+                        <div class="col-xxs-12 col-xs-4 mt">
+                          <div class="input-field">
+                            <label for="country">Country:</label>
+                            <input
+                              id="country"
+                              name="country"
+                              type="text"
+                              class="form-control"
+                              required
+                            />
+                          </div>
+                        </div>
+
+                        <div class="col-xxs-12 col-xs-4 mt">
+                          <div class="input-field">
+                            <label for="zipcode">Zip Code:</label>
+                            <input
+                              id="zipcode"
+                              name="zipcode"
+                              type="text"
+                              class="form-control"
+                              required
+                            />
+                          </div>
+                        </div>
+
+                        <div class="col-xxs-12 col-xs-6 mt">
+                          <div class="input-field">
+                            <label for="email">Email:</label>
+                            <input
+                              id="email"
+                              name="email"
+                              type="text"
+                              class="form-control"
+                              required
+                            />
+                          </div>
+                        </div>
+
+                        <div class="col-xxs-12 col-xs-6 mt">
+                          <div class="input-field">
+                            <label for="username">Username:</label>
+                            <input
+                              id="username"
+                              name="username"
+                              type="text"
+                              class="form-control"
+                              required
+                            />
+                          </div>
+                        </div>
+
+                        <div class="col-xxs-12 col-xs-6 mt">
+                          <div class="input-field">
+                            <label for="password">Password:</label>
+                            <input
+                              id="password"
+                              name="password"
+                              type="password"
+                              class="form-control"
+                              required
+                            />
+                          </div>
+                        </div>
+
+                        <div class="col-xxs-12 col-xs-6 mt">
+                          <div class="input-field">
+                            <label for="cpassword">Confirm Password:</label>
+                            <input
+                              id="cpassword"
+                              name="cpassword"
+                              type="password"
+                              class="form-control"
+                              required
+                            />
+                          </div>
+                        </div>
+                        <div class="col-xxs-12 col-xs-12 mt">
+                          <br>
+                          <h3>Card Details:</h3>
+                        </div>
+
+                        <div class="col-xxs-12 col-xs-6 mt">
+                          <div class="input-field">
+                            <label for="cardnumber">Card Number</label>
+                            <input
+                              id="cardnumber"
+                              name="cardnumber"
+                              type="text"
+                              class="form-control"
+                              required
+                            />
+                          </div>
+                        </div>
+
+                        <div class="col-xxs-12 col-xs-6 mt">
+                          <div class="input-field">
+                            <label for="nameoncard">Name On Card</label>
+                            <input
+                              id="nameoncard"
+                              name="nameoncard"
+                              type="text"
+                              class="form-control"
+                              required
+                            />
+                          </div>
+                        </div>
+
+                        <div class="col-xxs-12 col-xs-4 mt">
+                          <div class="input-field">
+                            <label for="expirymonth">Expiry Month</label>
+                            <input
+                              id="expirymonth"
+                              name="expirymonth"
+                              type="text"
+                              class="form-control"
+                              placeholder="MM"
+                              required
+                            />
+                          </div>
+                        </div>
+
+                        <div class="col-xxs-12 col-xs-4 mt">
+                          <div class="input-field">
+                            <label for="expiryyear">Expiry Year</label>
+                            <input
+                              id="expiryyear"
+                              name="expiryyear"
+                              type="text"
+                              class="form-control"
+                              placeholder="YYYY"
+                              required
+                            />
+                          </div>
+                        </div>
+
+                        <div class="col-xxs-12 col-xs-4 mt">
+                          <div class="input-field">
+                            <label for="cvv">CVV</label>
+                            <input
+                              id="cvv"
+                              name="cvv"
+                              type="text"
+                              class="form-control"
+                              required
+                            />
+                          </div>
+                        </div>
+
+                        
+                        
+                        <div class="col-xs-12">
+                          <br>
                           <input
-                            id="firstName"
-                            name="firstName"
-                            type="text"
-                            class="form-control"
+                            type="submit"
+                            class="btn btn-primary btn-block"
+                            value="Sign Up"
                           />
                         </div>
-                      </div>
-
-                      <div class="col-xxs-12 col-xs-4 mt">
-                        <div class="input-field">
-                          <label for="middleName">Middle Name: (if any)</label>
-                          <input
-                            id="middleName"
-                            name="middleName"
-                            type="text"
-                            class="form-control"
-                          />
-                        </div>
-                      </div>
-
-                      <div class="col-xxs-12 col-xs-4 mt">
-                        <div class="input-field">
-                          <label for="lastName">Last Name:</label>
-                          <input
-                            id="lastName"
-                            name="lastName"
-                            type="text"
-                            class="form-control"
-                          />
-                        </div>
-                      </div>
-
-                      
-                      <div class="col-xxs-12 col-xs-4 mt">
-                        <div class="input-field">
-                          <label for="address1">Address Line 1:</label>
-                          <input
-                            id="address1"
-                            name="address1"
-                            type="text"
-                            class="form-control"
-                          />
-                        </div>
-                      </div>
-
-                      <div class="col-xxs-12 col-xs-4 mt">
-                        <div class="input-field">
-                          <label for="address2">Address Line 2:</label>
-                          <input
-                            id="address2"
-                            name="address2"
-                            type="text"
-                            class="form-control"
-                          />
-                        </div>
-                      </div>
-
-                      
-                      <div class="col-xxs-12 col-xs-4 mt">
-                        <div class="input-field">
-                          <label for="city">City:</label>
-                          <input
-                            id="city"
-                            name="city"
-                            type="text"
-                            class="form-control"
-                          />
-                        </div>
-                      </div>
-
-                      <div class="col-xxs-12 col-xs-4 mt">
-                        <div class="input-field">
-                          <label for="state">State:</label>
-                          <input
-                            id="state"
-                            name="state"
-                            type="text"
-                            class="form-control"
-                          />
-                        </div>
-                      </div>
-
-                      <div class="col-xxs-12 col-xs-4 mt">
-                        <div class="input-field">
-                          <label for="country">Country:</label>
-                          <input
-                            id="country"
-                            name="country"
-                            type="text"
-                            class="form-control"
-                          />
-                        </div>
-                      </div>
-
-                      <div class="col-xxs-12 col-xs-4 mt">
-                        <div class="input-field">
-                          <label for="zipCode">Zip Code:</label>
-                          <input
-                            id="zipCode"
-                            name="zipCode"
-                            type="text"
-                            class="form-control"
-                          />
-                        </div>
-                      </div>
-
-                      <div class="col-xxs-12 col-xs-6 mt">
-                        <div class="input-field">
-                          <label for="email">Email:</label>
-                          <input
-                            id="email"
-                            name="email"
-                            type="text"
-                            class="form-control"
-                          />
-                        </div>
-                      </div>
-
-                      <div class="col-xxs-12 col-xs-6 mt">
-                        <div class="input-field">
-                          <label for="username">Username:</label>
-                          <input
-                            id="username"
-                            name="username"
-                            type="text"
-                            class="form-control"
-                          />
-                        </div>
-                      </div>
-
-                      <div class="col-xxs-12 col-xs-6 mt">
-                        <div class="input-field">
-                          <label for="password">Password:</label>
-                          <input
-                            id="password"
-                            name="password"
-                            type="password"
-                            class="form-control"
-                          />
-                        </div>
-                      </div>
-
-                      <div class="col-xxs-12 col-xs-6 mt">
-                        <div class="input-field">
-                          <label for="password">Confirm Password:</label>
-                          <input
-                            id="password"
-                            name="password"
-                            type="password"
-                            class="form-control"
-                          />
-                        </div>
-                      </div>
-                      <div class="col-xxs-12 col-xs-12 mt">
-                        <br>
-                        <h3>Card Details:</h3>
-                      </div>
-
-                      <div class="col-xxs-12 col-xs-6 mt">
-                        <div class="input-field">
-                          <label for="cardNumber">Card Number</label>
-                          <input
-                            id="cardNumber"
-                            name="cardNumber"
-                            type="text"
-                            class="form-control"
-                          />
-                        </div>
-                      </div>
-
-                      <div class="col-xxs-12 col-xs-6 mt">
-                        <div class="input-field">
-                          <label for="nameOnCard">Name On Card</label>
-                          <input
-                            id="nameOnCard"
-                            name="nameOnCard"
-                            type="text"
-                            class="form-control"
-                          />
-                        </div>
-                      </div>
-
-                      <div class="col-xxs-12 col-xs-4 mt">
-                        <div class="input-field">
-                          <label for="expiryMonth">Expiry Month</label>
-                          <input
-                            id="expiryMonth"
-                            name="expiryMonth"
-                            type="text"
-                            class="form-control"
-                            placeholder="MM"
-                          />
-                        </div>
-                      </div>
-
-                      <div class="col-xxs-12 col-xs-4 mt">
-                        <div class="input-field">
-                          <label for="expiryYear">Expiry Year</label>
-                          <input
-                            id="expiryYear"
-                            name="expiryYear"
-                            type="text"
-                            class="form-control"
-                            placeholder="YYYY"
-                          />
-                        </div>
-                      </div>
-
-                      <div class="col-xxs-12 col-xs-4 mt">
-                        <div class="input-field">
-                          <label for="cvv">CVV</label>
-                          <input
-                            id="cvv"
-                            name="cvv"
-                            type="text"
-                            class="form-control"
-                          />
-                        </div>
-                      </div>
-
-                      
-                      
-                      <div class="col-xs-12">
-                        <br>
-                        <input
-                          type="submit"
-                          class="btn btn-primary btn-block"
-                          value="Sign Up"
-                        />
                       </div>
                     </div>
                   </div>
-                </div>
+              </form>
               </div>
             </div>
           </div>

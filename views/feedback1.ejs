@@ -69,16 +69,16 @@
 					<!-- START #fh5co-menu-wrap -->
 					<nav id="fh5co-menu-wrap" role="navigation">
 						<ul class="sf-menu" id="fh5co-primary-menu">
-							<li><a href="/">Home</a></li>
-							<li><a href="/flight">Flight</a></li>
-                            <li><a href="/hotel">Hotel</a></li>
-                            <li><a href="/flightHotel">Flight + Hotel</a></li>
-							<li><a href="/deals">Deals</a></li>
-							<li><a href="/flightStatus">Flight Status</a></li>
-							<li><a href="/mileage">Mileage</a></li>
-							<li class="active"><a href="/feedback">Feedback</a></li>
-							<li><a href="/signup">Sign Up</a></li>
-							<li><a href="/login">Log In</a></li>
+							<li><a href="/index1">Home</a></li>
+							<li><a href="/flight1">Flight</a></li>
+                            <li><a href="/hotel1">Hotel</a></li>
+                            <li><a href="/flightHotel1">Flight + Hotel</a></li>
+							<li><a href="/deals1">Deals</a></li>
+							<li><a href="/flightStatus1">Flight Status</a></li>
+							<li><a href="/mileage1">Mileage</a></li>
+							<li class="active"><a href="/feedback1">Feedback</a></li>
+							<li><a href="/Orders1">Orders</a></li>
+                            <li><a href="/logout">Log Out</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -98,7 +98,7 @@
 						<p>Please let us know your valuable feedback.</p>
 					</div>
 				</div>
-				<form action="#">
+				<form action="/feedback1" method="POST">
 					<div class="row animate-box">
 
 
@@ -106,17 +106,17 @@
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
-										<input type="text" class="form-control" placeholder="Name">
+										<input type="text" class="form-control" name="name" placeholder="Name">
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-group">
-										<input type="text" class="form-control" placeholder="Email">
+										<input type="text" class="form-control" name="email" placeholder="Email">
 									</div>
 								</div>
 								<div class="col-md-8">
 									<div class="form-group">
-										<textarea name="" class="form-control" id="" cols="30" rows="7" placeholder="Message"></textarea>
+										<textarea name="message" class="form-control" id="" cols="30" rows="7" placeholder="Message"></textarea>
 									</div>
 								</div>
 

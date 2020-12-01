@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>FlyRest</title>
+    <title>FlyRest - Flight</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="FlyRest Travel Website" />
     <meta name="keywords" content="FlyRest Travel Website" />
@@ -74,70 +74,70 @@
               <!-- START #fh5co-menu-wrap -->
               <nav id="fh5co-menu-wrap" role="navigation">
                 <ul class="sf-menu" id="fh5co-primary-menu">
-                  <li ><a href="/">Home</a></li>
-                  <li><a href="/flight">Flight</a></li>
-                  <li><a href="/hotel">Hotel</a></li>
-                  <li><a href="/flightHotel">Flight + Hotel</a></li>
-                  <li><a href="/deals">Deals</a></li>
-                  <li ><a href="/flightStatus">Flight Status</a></li>
-                  <li class="active"><a href="/mileage">Mileage</a></li>
-                  <li><a href="/feedback">Feedback</a></li>
-                  <li><a href="/signup">Sign Up</a></li>
-                  <li><a href="/login">Log In</a></li>
+                  <li><a href="/index1">Home</a></li>
+                  <li ><a href="/flight1">Flight</a></li>
+                  <li class="active"><a href="/hotel1">Hotel</a></li>
+                  <li><a href="/flightHotel1">Flight + Hotel</a></li>
+                  <li><a href="/deals1">Deals</a></li>
+                  <li><a href="/flightStatus1">Flight Status</a></li>
+                  <li><a href="/mileage1">Mileage</a></li>
+                  <li><a href="/feedback1">Feedback</a></li>
+                  <li><a href="/Orders1">Orders</a></li>
+                  <li><a href="/logout">Log Out</a></li>
                 </ul>
               </nav>
             </div>
           </div>
         </header>
+        <!-- end:header-top -->
+        <div id="fh5co-tours" class="fh5co-section-gray">
+          <div class="container">
+            <div class="row">
+              <div
+                class="col-md-8 col-md-offset-2 text-center heading-section animate-box"
+              >
+                <h3>Confirm Hotel Details</h3>
+              </div>
+            </div>
+          </div>
+        </div>
 
-                <!-- end:header-top -->
-                <div id="fh5co-tours" class="fh5co-section-gray">
-                    <div class="container">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-md-12">
+              <div class="tabulation animate-box">
+                <!-- Nav tabs -->
+
+                <!-- Tab panes -->
+                <form action="/hotelConfirm" method="POST">
+                  <div class="tab-content">
                       <div class="row">
-                        <div
-                          class="col-md-8 col-md-offset-2 text-center heading-section animate-box"
-                        >
-                          <h3>Mileage</h3>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-sm-12 col-md-12">
-                        <div class="tabulation animate-box">
-                          <!-- Nav tabs -->
-          
-                          <!-- Tab panes -->
-                          <div class="tab-content">
-                              <div class="row">
-                                <div class="col-xxs-12 col-xs-6 mt">
-                                  <div class="input-field">
-                                    <label for="flightNumber">Accumulated Mileage</label>
-                                    <input
-                                      type="text"
-                                      class="form-control"
-                                      id="flightNumber"
-                                    />
-                                  </div>
-                                </div>
-
-                                <div class="col-xs-12">
-                                  <input
-                                    type="submit"
-                                    class="btn btn-primary btn-block"
-                                    value="Accumulate Mileage"
-                                  />
-                                </div>
-                              </div>
-                            </div>
+                        <div class="col-xxs-12 col-xs-6 mt">
+                          <div class="input-field">
+                            <label for="fromcity">Details</label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="fromcity"
+                              name="fromcity"
+                            />
                           </div>
                         </div>
+                        <div class="col-xs-12">
+                          <input
+                            type="submit"
+                            class="btn btn-primary btn-block"
+                            value="Search Flight"
+                          />
+                        </div>
                       </div>
                     </div>
                   </div>
-
-
-
-        <%- include('footer'); -%>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+<%- include('footer'); -%>

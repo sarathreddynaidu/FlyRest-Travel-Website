@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+  <!--<![endif]-->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>FlyRest</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="FlyRest Travel Website" />
+    <meta name="keywords" content="FlyRest Travel Website" />
+    <meta name="author" content="FlyRest Travel Website" />
+
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:description" content="" />
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:image" content="" />
+    <meta name="twitter:url" content="" />
+    <meta name="twitter:card" content="" />
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="shortcut icon" href="favicon.ico" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,300"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="css/animate.css" />
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="css/icomoon.css" />
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <!-- Superfish -->
+    <link rel="stylesheet" href="css/superfish.css" />
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="css/magnific-popup.css" />
+    <!-- Date Picker -->
+    <link rel="stylesheet" href="css/bootstrap-datepicker.min.css" />
+    <!-- CS Select -->
+    <link rel="stylesheet" href="css/cs-select.css" />
+    <link rel="stylesheet" href="css/cs-skin-border.css" />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Modernizr JS -->
+    <script src="js/modernizr-2.6.2.min.js"></script>
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div id="fh5co-wrapper">
+      <div id="fh5co-page">
+        <header id="fh5co-header-section" class="sticky-banner">
+          <div class="container">
+            <div class="nav-header">
+              <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle dark"
+                ><i></i
+              ></a>
+              <h1 id="fh5co-logo">
+                <a href="/"><i class="icon-airplane"></i>FlyRest</a>
+              </h1>
+              <!-- START #fh5co-menu-wrap -->
+              <nav id="fh5co-menu-wrap" role="navigation">
+                <ul class="sf-menu" id="fh5co-primary-menu">
+                  <li ><a href="/index1">Home</a></li>
+                  <li><a href="/flight1">Flight</a></li>
+                  <li><a href="/hotel1">Hotel</a></li>
+                  <li class="active"><a href="/flightHotel1">Flight + Hotel</a></li>
+                  <li><a href="/deals1">Deals</a></li>
+                  <li><a href="/flightStatus1">Flight Status</a></li>
+                  <li><a href="/mileage1">Mileage</a></li>
+                  <li><a href="/feedback1">Feedback</a></li>
+                  <li><a href="/Orders1">Orders</a></li>
+                  <li><a href="/logout">Log Out</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </header>
+
+        <div id="fh5co-tours" class="fh5co-section-gray" >
+            <div class="container">
+              <div class="row">
+                <div
+                  class="col-md-8 col-md-offset-2 text-center heading-section animate-box"
+                >
+                  <h3>Book Flight + Hotel</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <div class="desc">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-12 col-md-12">
+                  <div class="tabulation animate-box">
+                    <!-- Nav tabs -->
+                    <!-- <ul class="nav nav-tabs" role="tablist">
+                      <li role="presentation" class="active">
+                        <a
+                          href="#flights"
+                          aria-controls="flights"
+                          role="tab"
+                          data-toggle="tab"
+                          >Flight</a
+                        >
+                      </li>
+                      <li role="presentation">
+                        <a
+                          href="#hotels"
+                          aria-controls="hotels"
+                          role="tab"
+                          data-toggle="tab"
+                          >Hotel</a
+                        >
+                      </li>
+                    </ul> -->
+
+                    <!-- Tab panes -->
+                    <form action="/flighthotel1" method="POST">
+                      <div class="tab-content">
+                        <div
+                          role="tabpanel"
+                          class="tab-pane active"
+                          id="flights"
+                        >
+                          <div class="row">
+                            <div class="col-xxs-12 col-xs-6 mt">
+                              <div class="input-field">
+                                <label for="fromcity">From:</label>
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  id="fromcity"
+                                  name="fromcity"
+                                />
+                              </div>
+                            </div>
+                            <div class="col-xxs-12 col-xs-6 mt">
+                              <div class="input-field">
+                                <label for="tocity">To:</label>
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  id="tocity"
+                                  name="tocity"
+                                />
+                              </div>
+                            </div>
+                            <div class="col-xxs-12 col-xs-6 mt alternate">
+                              <div class="input-field">
+                                <label for="departuredate">Departure:</label>
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  id="departuredate"
+                                  name="departuredate"
+                                  placeholder="mm/dd/yyyy"
+                                />
+                              </div>
+                            </div>
+                            <div class="col-xxs-12 col-xs-6 mt alternate">
+                              <div class="input-field">
+                                <label for="returndate">Return:</label>
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  id="returndate"
+                                  name="returndate"
+                                  placeholder="mm/dd/yyyy"
+                                />
+                              </div>
+                            </div>
+                            <div class="col-xxs-12 col-xs-6 mt">
+                              <section>
+                                <label for="class">Travelers:</label>
+                                <select class="cs-select cs-skin-border" name="travelers">
+                                  <option value="" disabled selected>0</option>
+                                  <option value="1">1</option>
+                                  <option value="2">2</option>
+                                  <option value="3">3</option>
+                                  <option value="4">4</option>
+                                  <option value="5">5</option>
+                                  <option value="6">6</option>
+                                  <option value="7">7</option>
+                                  <option value="8">8</option>
+                                  <option value="9">9</option>
+                                  <option value="10">10</option>
+                                </select>
+                              </section>
+                            </div>
+                            <div class="col-xxs-12 col-xs-6 mt">
+                              <div class="input-field">
+                              <label for="city">City:</label>
+                              <input
+                                  type="text"
+                                  class="form-control"
+                                  id="city"
+                                  name="city"
+                              />
+                              </div>
+                          </div>
+                          
+                          <div class="col-xxs-12 col-xs-6 mt alternate">
+                              <div class="input-field">
+                              <label for="checkin">Check In:</label>
+                              <input
+                                  type="text"
+                                  class="form-control"
+                                  id="checkin"
+                                  name="checkin"
+                                  placeholder="mm/dd/yyyy"
+                              />
+                              </div>
+                          </div>
+                          <div class="col-xxs-12 col-xs-6 mt alternate">
+                              <div class="input-field">
+                              <label for="checkout">Check Out:</label>
+                              <input
+                                  type="text"
+                                  class="form-control"
+                                  id="checkout"
+                                  name="checkout"
+                                  placeholder="mm/dd/yyyy"
+                              />
+                              </div>
+                          </div>
+                          <div class="col-xxs-12 col-xs-6 mt">
+                              <section>
+                              <label for="class">Rooms:</label>
+                              <select class="cs-select cs-skin-border" name="rooms">
+                                  <option value="" disabled selected>0</option>
+                                  <option value="1">1</option>
+                                  <option value="2">2</option>
+                                  <option value="3">3</option>
+                                  <option value="4">4</option>
+                                  <option value="5">5</option>
+                              </select>
+                              </section>
+                          </div>
+
+
+                            <div class="col-xs-12">
+                              <input
+                              type="submit"
+                              class="btn btn-primary btn-block"
+                              value="Search Flight + Hotel"
+                              />
+
+                          </div>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+<%- include('footer'); -%>

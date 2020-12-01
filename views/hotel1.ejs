@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>FlyRest - Log In</title>
+    <title>FlyRest - Hotel</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="FlyRest Travel Website" />
     <meta name="keywords" content="FlyRest Travel Website" />
@@ -74,16 +74,16 @@
               <!-- START #fh5co-menu-wrap -->
               <nav id="fh5co-menu-wrap" role="navigation">
                 <ul class="sf-menu" id="fh5co-primary-menu">
-                  <li><a href="/">Home</a></li>
-                  <li ><a href="/flight">Flight</a></li>
-                  <li><a href="/hotel">Hotel</a></li>
-                  <li><a href="/flightHotel">Flight + Hotel</a></li>
-                  <li><a href="/deals">Deals</a></li>
-                  <li><a href="/flightStatus">Flight Status</a></li>
-                  <li><a href="/mileage">Mileage</a></li>
-                  <li><a href="/feedback">Feedback</a></li>
-                  <li><a href="/signup">Sign Up</a></li>
-                  <li class="active"><a href="/login">Log In</a></li>
+                  <li><a href="/index1">Home</a></li>
+                  <li ><a href="/flight1">Flight</a></li>
+                  <li class="active"><a href="/hotel1">Hotel</a></li>
+                  <li><a href="/flightHotel1">Flight + Hotel</a></li>
+                  <li><a href="/deals1">Deals</a></li>
+                  <li><a href="/flightStatus1">Flight Status</a></li>
+                  <li><a href="/mileage1">Mileage</a></li>
+                  <li><a href="/feedback1">Feedback</a></li>
+                  <li><a href="/Orders1">Orders</a></li>
+                  <li><a href="/logout">Log Out</a></li>
                 </ul>
               </nav>
             </div>
@@ -96,7 +96,7 @@
               <div
                 class="col-md-8 col-md-offset-2 text-center heading-section animate-box"
               >
-                <h3>Log In</h3>
+                <h3>Book A Hotel</h3>
               </div>
             </div>
           </div>
@@ -109,56 +109,91 @@
                 <!-- Nav tabs -->
 
                 <!-- Tab panes -->
-                <form action="/login" method="POST">
+                <form action="/hotel1" method="POST">
                   <div class="tab-content">
                       <div class="row">
                         <div class="col-xxs-12 col-xs-6 mt">
                           <div class="input-field">
-                            <label for="username">Username:</label>
+                            <label for="city">City:</label>
                             <input
-                              id="username"
-                              name="username"
                               type="text"
                               class="form-control"
+                              id="city"
+                              name="city"
                             />
                           </div>
+                        </div>
+                        <div class="col-xxs-12 col-xs-6 mt alternate">
+                                    <div class="input-field">
+                                      <label for="checkin">Check In:</label>
+                                      <input
+                                        type="text"
+                                        class="form-control"
+                                        id="checkin"
+                                        name="checkin"
+                                        placeholder="mm/dd/yyyy"
+                                      />
+                                    </div>
+                                  </div>
+                        <div class="col-xxs-12 col-xs-6 mt">
+                        <section>
+                          <label for="class">Rooms:</label>
+                            <select class="cs-select cs-skin-border" name="rooms">
+                            <option value="0" disabled selected>0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            </select>
+                        </section>
                         </div>
 
-                        <div class="col-xxs-12 col-xs-6 mt">
+                        <div class="col-xxs-12 col-xs-6 mt alternate">
                           <div class="input-field">
-                            <label for="password">Password:</label>
+                            <label for="checkout">Check Out:</label>
                             <input
-                              id="password"
-                              name="password"
-                              type="password"
+                              type="text"
                               class="form-control"
-                              required
+                              id="checkout"
+                              name="checkout"
+                              placeholder="mm/dd/yyyy"
                             />
                           </div>
                         </div>
-                        
+                        <div class="col-xxs-12 col-xs-6 mt">
+                          <section>
+                            <label for="class">Guests:</label>
+                            <select class="cs-select cs-skin-border" name="guests">
+                              <option value="" disabled selected>0</option>
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                              <option value="6">6</option>
+                              <option value="7">7</option>
+                              <option value="8">8</option>
+                              <option value="9">9</option>
+                              <option value="10">10</option>
+                            </select>
+                          </section>
+                        </div>
                         <div class="col-xs-12">
                           <input
                             type="submit"
                             class="btn btn-primary btn-block"
-                            value="Log In"
-                            required
+                            value="Search Hotel"
                           />
                         </div>
                       </div>
                     </div>
                   </div>
-              </form>
+                </form>
               </div>
             </div>
           </div>
         </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
         <br>
         <br>
 <%- include('footer'); -%>
